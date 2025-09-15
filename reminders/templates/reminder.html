@@ -1,0 +1,10 @@
+{% extends "main-template.html" %}
+{% block title %}Create Reminder{% endblock %}
+{% block content %}
+    <h1>Make Reminder</h1>
+    <form method="POST" action="{% url 'reminders:makereminder' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Reminder</button>
+    </form>
+{% endblock %}

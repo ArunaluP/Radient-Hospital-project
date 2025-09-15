@@ -1,0 +1,14 @@
+{% extends "main-template.html" %}
+{% block title %}Reminder list{% endblock %}
+{% block content %}
+<p><a href="/makereminder">Add a reminder</a></p>
+
+<h1>Reminders</h1>
+    <ul>
+        {% for x in reminders %}
+            <li>{{ x.title }} {{ x.date }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+{% endblock %}
